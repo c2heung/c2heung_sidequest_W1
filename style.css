@@ -1,0 +1,51 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Teal-blue round background circle */
+body::before {
+  content: "";
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  height: 80vmin;
+  max-width: 900px;
+  max-height: 900px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    #66d5d9 0%,
+    #0e8f9d 50%,
+    #006970 100%
+  );
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.22),
+    inset 0 10px 30px rgba(255, 255, 255, 0.03);
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.96;
+}
+
+canvas {
+  display: block;
+  position: relative;
+  z-index: 0;
+}
